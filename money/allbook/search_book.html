@@ -1,0 +1,32 @@
+﻿<html>
+<body>
+<body bgcolor="#33FF33">
+<body link="#000099" alink="#FF0000">
+<body text="#0000FF">
+<br></br><br></br>
+<h1 align="center">Show Book List</h1>
+<br></br>
+<form method="get" action="/search_author/">
+
+{% if books %}
+	{% for book in books %}
+	<tr>
+    <center>
+	<input type="submit" name="p" value="{{book.title}}">
+	<br></br>
+    </center>
+	</tr>
+	{% endfor %}
+{% else %}
+	<p>No books matched your search criteria.</p>
+{% endif%}
+</form>
+<br></br><br></br>
+<center>
+<a href="/search_form/">Back To Search</a>
+<br></br><br></br>
+<td>版权所有&copy;</td><br>
+<td>Made By Chengshao</td>
+</center>
+</body>
+</html>

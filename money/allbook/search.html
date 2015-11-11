@@ -1,0 +1,19 @@
+<html>
+<body>
+<table border=1 align="center"> 
+{% if author_list %}
+	{% for author in author_list %}
+	<tr>
+	<h5>{{author.authorID}}</h5>
+	<h5>{{author.name}}</h5>
+	<h5>{{author.age}}</h5>
+	<h5>{{author.country}}</h5>
+	</tr>
+	{% endfor %}
+{% else%}
+	<p>No books matched your search criteria.</p>
+{% endif %}
+
+</table>
+</body>
+</html>
